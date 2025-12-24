@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - ประวัติผลงานของฉัน</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- ส่วนของการตั้งค่าดีไซน์ (CSS) --- */
+        
+        /* รีเซ็ตค่าเริ่มต้นของ Browser */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Sarabun', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* จัดเนื้อหาให้อยู่กึ่งกลาง ไม่กว้างจนเกินไป */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* เงาบางๆ ให้ดูมีมิติ */
+        }
+
+        /* --- ส่วน Header (รูปและชื่อ) --- */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid #eee;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* ทำให้รูปเป็นวงกลม */
+            object-fit: cover;
+            border: 4px solid #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            font-weight: bold;
+        }
+
+        /* --- ส่วนเนื้อหา (Sections) --- */
+        section {
+            padding: 30px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-left: 5px solid #3498db; /* ขีดสีฟ้าด้านหน้าหัวข้อ */
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* การจัดเรียงรายการบริการ (Grid แบบง่าย) */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .service-card:hover {
+            background: #e8f6ff; /* เปลี่ยนสีเมื่อเอาเมาส์ชี้ */
+            cursor: pointer;
+        }
+
+        /* --- ปุ่มติดต่อ --- */
+        .btn-contact {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-contact:hover {
+            background-color: #2980b9;
+        }
+
+        /* --- ส่วน Footer --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* --- Responsive สำหรับมือถือ --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .container { width: 100%; box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <img src="https://via.placeholder.com/150" alt="รูปโปรไฟล์" class="profile-img">
+            
+            <h1>ชื่อ-นามสกุล (ภาษาไทย/อังกฤษ)</h1>
+            <p class="job-title">Freelance Graphic Designer & Content Creator</p>
+            
+            <a href="mailto:email@example.com" class="btn-contact">ติดต่องาน</a>
+        </header>
+
+        <section id="about">
+            <h2>เกี่ยวกับฉัน</h2>
+            <p>
+                สวัสดีครับ/ค่ะ ผมเป็นฟรีแลนซ์ที่มีความเชี่ยวชาญด้านการออกแบบกราฟิกและการเขียนคอนเทนต์ 
+                มีประสบการณ์ทำงานมากว่า 2 ปี ชอบความท้าทายและเรียนรู้เทคโนโลยีใหม่ๆ เสมอ 
+                เป้าหมายคือการสร้างสรรค์งานที่ตอบโจทย์ลูกค้าและสร้างมูลค่าเพิ่มให้กับธุรกิจ
+            </p>
+        </section>
+
+        <section id="services">
+            <h2>บริการที่รับทำ</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🎨 Graphic Design</h3>
+                    <p>รับออกแบบโลโก้, แบนเนอร์โฆษณา, และสื่อสิ่งพิมพ์ทุกชนิด</p>
+                </div>
+                <div class="service-card">
+                    <h3>💻 Web Design</h3>
+                    <p>ออกแบบหน้าเว็บไซต์ด้วย Canva หรือ Wix สวยงาม ทันสมัย</p>
+                </div>
+                <div class="service-card">
+                    <h3>📝 Content Writing</h3>
+                    <p>รับเขียนบทความ SEO, แคปชั่นขายของ และบทความวิชาการ</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>ช่องทางการติดต่อ</h2>
+            <ul>
+                <li><strong>เบอร์โทร:</strong> 08x-xxx-xxxx</li>
+                <li><strong>Line ID:</strong> mylineid</li>
+                <li><strong>Email:</strong> student@example.com</li>
+                <li><strong>ที่อยู่:</strong> กรุงเทพมหานคร</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2023 My Portfolio. Created for Web Design Class.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
